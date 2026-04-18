@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Najciekawsze zlecenie kwartału</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>🏆 Najciekawsze zlecenie kwartału</h1>
+        <p>
+          Kliknij ciekawsze z dwóch zleceń. Zwycięzca przechodzi dalej, aż zostanie
+          tylko jedno.
+        </p>
+      </header>
+
+      <section class="status" aria-live="polite">
+        <p id="round-info">Runda 1</p>
+        <p id="remaining-info">Pozostało: 44</p>
+      </section>
+
+      <section id="match-container" class="match" aria-label="Pojedynek zleceń"></section>
+
+      <section id="winner" class="winner hidden" aria-live="polite">
+        <h2>Zwycięzca 🎉</h2>
+        <p id="winner-text"></p>
+        <button id="restart-btn" type="button">Zagraj ponownie</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

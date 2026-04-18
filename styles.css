@@ -1,0 +1,143 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --muted: #cbd5e1;
+  --accent: #22c55e;
+  --accent-hover: #16a34a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #1e293b, var(--bg));
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin-bottom: 8px;
+}
+
+.header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: color-mix(in srgb, var(--panel), black 12%);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+.status p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.match {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border: 1px solid #374151;
+  border-radius: 14px;
+  padding: 18px;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.12s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  min-height: 120px;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #94a3b8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.code {
+  display: block;
+  color: #93c5fd;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.winner {
+  margin-top: 22px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid #14532d;
+  background: linear-gradient(160deg, #052e16, #14532d);
+}
+
+.winner h2 {
+  margin-top: 0;
+}
+
+#winner-text {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+#restart-btn {
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #052e16;
+  font-weight: 700;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  background: var(--accent-hover);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .match {
+    grid-template-columns: 1fr;
+  }
+
+  .status {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
